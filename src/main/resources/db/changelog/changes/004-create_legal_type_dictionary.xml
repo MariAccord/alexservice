@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet author="allergi-ya@yandex.ru" id="004">
+        <sql>
+            CREATE TABLE dictionaries.legal_type
+            (
+            id           UUID         NOT NULL DEFAULT uuid_generate_v4() PRIMARY KEY,
+            code         VARCHAR(20)  NOT NULL,
+            value        VARCHAR(100) NOT NULL,
+            date_created TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT now(),
+            enabled      BOOLEAN      NOT NULL DEFAULT TRUE
+            );
+
+            INSERT INTO dictionaries.legal_type(id, code, value) VALUES
+            ('ad0725ea-afd7-4311-91eb-711d8377ae17','UL','Юридическое лицо'),
+            ('2dc3e2f8-6d0c-43e7-8ca2-118189986ff5','RL','Физическое лицо');
+
+        </sql>
+    </changeSet>
+</databaseChangeLog>

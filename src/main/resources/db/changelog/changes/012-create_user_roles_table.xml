@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet author="allergi-ya@yandex.ru" id="012">
+        <sql>
+            CREATE TABLE tables.user_roles
+            (
+            user_id UUID NOT NULL,
+            role    VARCHAR(50),
+            PRIMARY KEY (user_id, role),
+            FOREIGN KEY (user_id) REFERENCES tables.user (id) ON DELETE CASCADE
+            );
+
+        </sql>
+    </changeSet>
+</databaseChangeLog>

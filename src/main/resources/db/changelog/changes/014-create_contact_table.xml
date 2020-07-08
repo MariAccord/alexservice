@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet author="allergi-ya@yandex.ru" id="014">
+        <sql>
+            CREATE TABLE tables.contact
+            (
+            id              UUID        NOT NULL DEFAULT uuid_generate_v4() PRIMARY KEY,
+            customer_id     UUID        NOT NULL,
+            number          INTEGER     NOT NULL,
+            contact_type_id UUID        NOT NULL,
+            FOREIGN KEY (customer_id) REFERENCES tables.customer (id),
+            FOREIGN KEY (contact_type_id) REFERENCES dictionaries.contact_type (id)
+            );
+        </sql>
+    </changeSet>
+</databaseChangeLog>

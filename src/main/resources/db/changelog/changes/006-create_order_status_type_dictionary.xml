@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet author="allergi-ya@yandex.ru" id="006">
+        <sql>
+            CREATE TABLE dictionaries.order_status_type
+            (
+            id           UUID         NOT NULL DEFAULT uuid_generate_v4() PRIMARY KEY,
+            code         VARCHAR(10)  NOT NULL,
+            value        VARCHAR(100) NOT NULL,
+            date_created TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT now(),
+            enabled      BOOLEAN      NOT NULL DEFAULT TRUE
+            );
+
+            INSERT INTO dictionaries.order_status_type(id, code, value) VALUES
+            ('c45cd9e1-2fa8-448f-a6bc-c5be40099f7a','NEW','Создан'),
+            ('fdaff37c-0f2b-4e40-b204-0608418184f5','WAITCALL','Ожидает звонка'),
+            ('4c5b5840-f453-47f5-9c78-9fd2b00a4094','WAITTECH','Ожидает техника'),
+            ('154d66d4-1d0e-467d-8e1f-b952233c8798','WORKING','Техник на заказе'),
+            ('5d8bf7b2-161e-4238-bd12-97282a121d68','SERVICE','В сервисе'),
+            ('da5eb3cf-5bf2-47fd-b91e-85275fdb25a8','DETAILS','Ожидает детали'),
+            ('527cc328-343e-4a0c-84fa-b87fb908bebc','CONTROL','Контроль выполнения заказа'),
+            ('ca8dab3c-8881-4ff3-889b-88b33ae3e0c5','DONE','Заказ выполнен'),
+            ('81bf7500-c317-4a87-a81b-fab6b4f2f99d','GUARANTEE','Обращение по гарантии');
+
+        </sql>
+    </changeSet>
+</databaseChangeLog>

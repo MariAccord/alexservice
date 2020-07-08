@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet author="allergi-ya@yandex.ru" id="003">
+        <sql>
+            CREATE TABLE dictionaries.contact_type
+            (
+            id           UUID         NOT NULL DEFAULT uuid_generate_v4() PRIMARY KEY,
+            code         VARCHAR(10)  NOT NULL,
+            value        VARCHAR(100) NOT NULL,
+            date_created TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT now(),
+            enabled      BOOLEAN      NOT NULL DEFAULT TRUE
+            );
+
+            INSERT INTO dictionaries.contact_type(id, code, value) VALUES
+            ('8a7fb287-71d1-44ae-8168-2f6321c990ec','MOB','Личный мобильный'),
+            ('b22c2791-e005-4325-bc36-88fcb0c23030','HOME','Домашний'),
+            ('2fd86263-36e9-447a-a97e-b57a3223fd95','WORK','Рабочий'),
+            ('ef12a905-b496-48a0-a5a2-913584412480','VIBER','Viber'),
+            ('d7426499-4893-464b-8468-79e14c1aa334','WAPP','WhatsApp'),
+            ('5a5bf829-1ebf-4b40-be71-a3582094c7e4','TELEG','Telegram'),
+            ('9773dcc3-d7a8-40f5-8466-f31589db68d5','INST','Instagram'),
+            ('24caa8b3-f49b-4289-92ef-6c6a66febabe','VK','Вконтакте');
+
+        </sql>
+    </changeSet>
+</databaseChangeLog>

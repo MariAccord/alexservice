@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <include file="/db/changelog/changes/001-create_dictionary_schema.xml"/>
+    <include file="/db/changelog/changes/002-create_street_dictionary.xml"/>
+    <include file="/db/changelog/changes/003-create_contact_type_dictionary.xml"/>
+    <include file="/db/changelog/changes/004-create_legal_type_dictionary.xml"/>
+    <include file="/db/changelog/changes/005-create_customer_type_dictionary.xml"/>
+    <include file="/db/changelog/changes/006-create_order_status_type_dictionary.xml"/>
+    <include file="/db/changelog/changes/007-create_table_schema.xml"/>
+    <include file="/db/changelog/changes/008-create_customer_table.xml"/>
+    <include file="/db/changelog/changes/009-create_user_table.xml"/>
+    <include file="/db/changelog/changes/010-create_order_status_table.xml"/>
+    <include file="/db/changelog/changes/011-create_order_table.xml"/>
+    <include file="/db/changelog/changes/012-create_user_roles_table.xml"/>
+    <include file="/db/changelog/changes/013-create_address_table.xml"/>
+    <include file="/db/changelog/changes/014-create_contact_table.xml"/>
+    <include file="/db/changelog/changes/015-create_executed_work_table.xml"/>
+
+</databaseChangeLog>

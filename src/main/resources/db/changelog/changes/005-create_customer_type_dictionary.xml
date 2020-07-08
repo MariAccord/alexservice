@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet author="allergi-ya@yandex.ru" id="005">
+        <sql>
+            CREATE TABLE dictionaries.customer_type
+            (
+            id           UUID         NOT NULL DEFAULT uuid_generate_v4() PRIMARY KEY,
+            code         VARCHAR(10)  NOT NULL,
+            value        VARCHAR(100) NOT NULL,
+            date_created TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT now(),
+            enabled      BOOLEAN      NOT NULL DEFAULT TRUE
+            );
+
+            INSERT INTO dictionaries.customer_type(id, code, value) VALUES
+            ('a2021e1c-ae44-4a95-b85d-c04672d31303','VIP','VIP'),
+            ('7658f0b5-8cf9-4934-90c4-162117e3d423','SIMPLE','Обычный'),
+            ('a485b61f-ac51-4095-aee4-136ba47de677','ONCONTROL','На контроле'),
+            ('85acb91b-f2eb-4037-b465-8e87b1c63c05','PROBLEM','Проблемный клиент'),
+            ('0d61efa7-2a67-4a8c-948a-f657aac4160a','NEW','Новый');
+
+        </sql>
+    </changeSet>
+</databaseChangeLog>
