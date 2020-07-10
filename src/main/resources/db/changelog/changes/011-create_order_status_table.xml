@@ -8,15 +8,13 @@
 
     <changeSet author="allergi-ya@yandex.ru" id="011">
         <sql>
-            CREATE TABLE tables.order
+            CREATE TABLE tables.order_status
             (
-            id                  UUID                     NOT NULL DEFAULT uuid_generate_v4() PRIMARY KEY,
-            customer_id         UUID                     NOT NULL,
-            date_created        TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT now(),
-            problem_description VARCHAR(100)             NOT NULL,
-            user_id             UUID                     NOT NULL,
-            FOREIGN KEY (customer_id) REFERENCES tables.customer (id),
-            FOREIGN KEY (user_id) REFERENCES tables.user (id)
+            id             UUID                     NOT NULL DEFAULT uuid_generate_v4() PRIMARY KEY,
+            order_id       UUID                     NOT NULL,
+            status_type_id UUID                     NOT NULL,
+            user_id        UUID                     NOT NULL,
+            date_time      TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT now()
             );
         </sql>
     </changeSet>

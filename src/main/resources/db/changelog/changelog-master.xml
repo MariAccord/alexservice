@@ -15,8 +15,8 @@
     <include file="/db/changelog/changes/007-create_table_schema.xml"/>
     <include file="/db/changelog/changes/008-create_customer_table.xml"/>
     <include file="/db/changelog/changes/009-create_user_table.xml"/>
-    <include file="/db/changelog/changes/010-create_order_status_table.xml"/>
-    <include file="/db/changelog/changes/011-create_order_table.xml"/>
+    <include file="/db/changelog/changes/010-create_order_table.xml"/>
+    <include file="/db/changelog/changes/011-create_order_status_table.xml"/>
     <include file="/db/changelog/changes/012-create_user_roles_table.xml"/>
     <include file="/db/changelog/changes/013-create_address_table.xml"/>
     <include file="/db/changelog/changes/014-create_contact_table.xml"/>
