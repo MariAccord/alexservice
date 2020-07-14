@@ -11,11 +11,10 @@
             CREATE TABLE tables.executed_work
             (
             id          UUID                     NOT NULL DEFAULT uuid_generate_v4() PRIMARY KEY,
-            order_id    UUID                     NOT NULL,
             customer_id UUID                     NOT NULL,
             user_id     UUID                     NOT NULL,
             name        VARCHAR(80)              NOT NULL,
-            coast       NUMERIC                  NOT NULL,
+            cost        NUMERIC                  NOT NULL,
             date_time   TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT now(),
             FOREIGN KEY (order_id) REFERENCES tables.order (id),
             FOREIGN KEY (customer_id) REFERENCES tables.customer (id),

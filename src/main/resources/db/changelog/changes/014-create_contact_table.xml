@@ -12,7 +12,7 @@
             (
             id              UUID        NOT NULL DEFAULT uuid_generate_v4() PRIMARY KEY,
             customer_id     UUID        NOT NULL,
-            number          INTEGER,
+            number          VARCHAR(20) NOT NULL,
             contact_type_id UUID        NOT NULL,
             FOREIGN KEY (customer_id) REFERENCES tables.customer (id),
             FOREIGN KEY (contact_type_id) REFERENCES dictionaries.contact_type (id)
