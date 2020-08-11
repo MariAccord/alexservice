@@ -1,5 +1,6 @@
 package com.example.test_app.dto;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -10,8 +11,8 @@ public class CustomerDto {
     private String customerType;
     private String legalType;
     private String comment;
-    private List<AddressDto> addresses;
-    private List<ContactDto> contacts;
+    private List<AddressDto> addresses = new ArrayList<>();
+    private List<ContactDto> contacts = new ArrayList<>();
 
     public UUID getId() {
         return id;

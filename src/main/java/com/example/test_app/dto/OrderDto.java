@@ -1,6 +1,7 @@
 package com.example.test_app.dto;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -10,8 +11,8 @@ public class OrderDto {
     private LocalDateTime dateCreated;
     private String problemDescription;
     private String userName;
-    private List<OrderStatusDto> orderStatuses;
-    private List<ExecutedWorkDto> executedWorks;
+    private List<OrderStatusDto> orderStatuses = new ArrayList<>();
+    private List<ExecutedWorkDto> executedWorks = new ArrayList<>();
 
     public UUID getId() {
         return id;
