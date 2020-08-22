@@ -1,7 +1,7 @@
 package com.example.test_app.service;
 
 import com.example.test_app.dto.*;
-import com.example.test_app.persistence.dao.tables.OrderDao;
+import com.example.test_app.persistence.dao.application.OrderDao;
 import com.example.test_app.persistence.entity.tables.*;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

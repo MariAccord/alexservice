@@ -9,7 +9,7 @@ import java.util.Set;
 import java.util.UUID;
 
 @Entity
-@Table(name = "user", schema = "tables")
+@Table(name = "user", schema = "application")
 public class User {
 
     @Id
@@ -32,7 +32,7 @@ public class User {
     @Column(name = "date_created", nullable = false)
     private LocalDateTime dateCreated;
 
-    @CollectionTable(schema = "tables", name = "user_roles",
+    @CollectionTable(schema = "application", name = "user_roles",
             joinColumns = @JoinColumn(name = "user_id"))
     @ElementCollection(fetch = FetchType.EAGER)
     @Column(name = "role")

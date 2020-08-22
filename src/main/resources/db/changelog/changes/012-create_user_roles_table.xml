@@ -8,12 +8,12 @@
 
     <changeSet author="allergi-ya@yandex.ru" id="012">
         <sql>
-            CREATE TABLE tables.user_roles
+            CREATE TABLE application.user_roles
             (
             user_id UUID NOT NULL,
             role    VARCHAR(50),
             PRIMARY KEY (user_id, role),
-            FOREIGN KEY (user_id) REFERENCES tables.user (id) ON DELETE CASCADE
+            FOREIGN KEY (user_id) REFERENCES application.user (id) ON DELETE CASCADE
             );
 
         </sql>

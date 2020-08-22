@@ -6,7 +6,7 @@ import javax.validation.constraints.Size;
 import java.util.UUID;
 
 @Entity
-@Table(name = "address", schema = "tables")
+@Table(name = "address", schema = "application")
 public class Address {
 
     @Id

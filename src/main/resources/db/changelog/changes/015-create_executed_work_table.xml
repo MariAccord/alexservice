@@ -8,7 +8,7 @@
 
     <changeSet author="allergi-ya@yandex.ru" id="015">
         <sql>
-            CREATE TABLE tables.executed_work
+            CREATE TABLE application.executed_work
             (
             id          UUID                     NOT NULL DEFAULT uuid_generate_v4() PRIMARY KEY,
             order_id    UUID                     NOT NULL,
@@ -16,8 +16,8 @@
             name        VARCHAR(80)              NOT NULL,
             cost        NUMERIC                  NOT NULL,
             date_time   TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT now(),
-            FOREIGN KEY (order_id) REFERENCES tables.order (id),
-            FOREIGN KEY (user_id) REFERENCES tables.user (id)
+            FOREIGN KEY (order_id) REFERENCES application.order (id),
+            FOREIGN KEY (user_id) REFERENCES application.user (id)
             );
         </sql>
     </changeSet>

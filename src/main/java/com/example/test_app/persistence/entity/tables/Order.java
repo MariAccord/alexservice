@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Entity
-@Table(name = "order", schema = "tables")
+@Table(name = "order", schema = "application")
 public class Order {
 
     @Id

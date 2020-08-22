@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Entity
-@Table(name = "customer", schema = "tables")
+@Table(name = "customer", schema = "application")
 public class Customer {
 
     @Id

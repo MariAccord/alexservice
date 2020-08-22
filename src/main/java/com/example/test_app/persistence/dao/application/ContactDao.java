@@ -1,4 +1,4 @@
-package com.example.test_app.persistence.dao.tables;
+package com.example.test_app.persistence.dao.application;
 
 import com.example.test_app.persistence.entity.tables.Contact;
 import org.springframework.data.jpa.repository.JpaRepository;

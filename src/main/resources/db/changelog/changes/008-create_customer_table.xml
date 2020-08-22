@@ -8,7 +8,7 @@
 
     <changeSet author="allergi-ya@yandex.ru" id="008">
         <sql>
-            CREATE TABLE tables.customer
+            CREATE TABLE application.customer
             (
             id               UUID         NOT NULL DEFAULT uuid_generate_v4() PRIMARY KEY,
             name             VARCHAR(50),

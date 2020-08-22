@@ -8,15 +8,15 @@
 
     <changeSet author="allergi-ya@yandex.ru" id="010">
         <sql>
-            CREATE TABLE tables.order
+            CREATE TABLE application.order
             (
             id                  UUID                     NOT NULL DEFAULT uuid_generate_v4() PRIMARY KEY,
             customer_id         UUID                     NOT NULL,
             date_created        TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT now(),
             problem_description VARCHAR(100)             NOT NULL,
             user_id             UUID                     NOT NULL,
-            FOREIGN KEY (customer_id) REFERENCES tables.customer (id),
-            FOREIGN KEY (user_id) REFERENCES tables.user (id)
+            FOREIGN KEY (customer_id) REFERENCES application.customer (id),
+            FOREIGN KEY (user_id) REFERENCES application.user (id)
             );
         </sql>
     </changeSet>

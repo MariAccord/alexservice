@@ -9,7 +9,7 @@ import java.util.UUID;
 
 
 @Entity
-@Table(name = "executed_work", schema = "tables")
+@Table(name = "executed_work", schema = "application")
 public class ExecutedWork {
 
     @Id
