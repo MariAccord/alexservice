@@ -1,21 +1,12 @@
 package com.example.test_app.dto;
 
 public class AddressDto {
-    private CustomerDto customer;
     private String city;
     private String street;
     private String buildingNumber;
     private Integer flatNumber;
     private String office;
     private String comment;
-
-    public CustomerDto getCustomer() {
-        return customer;
-    }
-
-    public void setCustomer(CustomerDto customer) {
-        this.customer = customer;
-    }
 
     public String getCity() {
         return city;
@@ -68,7 +59,6 @@ public class AddressDto {
     @Override
     public String toString() {
         return "AddressDto{" +
-                "customer=" + customer +
                 ", city='" + city + '\'' +
                 ", street='" + street + '\'' +
                 ", buildingNumber='" + buildingNumber + '\'' +
