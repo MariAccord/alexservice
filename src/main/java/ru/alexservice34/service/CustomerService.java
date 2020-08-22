@@ -1,10 +1,10 @@
-package com.example.test_app.service;
+package ru.alexservice34.service;
 
-import com.example.test_app.dto.customersearch.CustomerSearchRequest;
-import com.example.test_app.dto.customersearch.CustomerSearchResponse;
-import com.example.test_app.persistence.dao.tables.CustomerDao;
+import ru.alexservice34.dto.customersearch.CustomerSearchRequest;
+import ru.alexservice34.dto.customersearch.CustomerSearchResponse;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+import ru.alexservice34.persistence.dao.application.CustomerDao;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.example.test_app.dto.customersearch;
+package ru.alexservice34.dto.customersearch;
 
 import lombok.Data;
 

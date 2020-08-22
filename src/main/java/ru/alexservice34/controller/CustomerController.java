@@ -1,9 +1,8 @@
-package com.example.test_app.controller;
+package ru.alexservice34.controller;
 
-import com.example.test_app.dto.CustomerDto;
-import com.example.test_app.dto.customersearch.CustomerSearchRequest;
-import com.example.test_app.dto.customersearch.CustomerSearchResponse;
-import com.example.test_app.service.CustomerService;
+import ru.alexservice34.dto.customersearch.CustomerSearchRequest;
+import ru.alexservice34.dto.customersearch.CustomerSearchResponse;
+import ru.alexservice34.service.CustomerService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
