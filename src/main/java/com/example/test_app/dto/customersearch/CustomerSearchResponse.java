@@ -6,5 +6,5 @@ import java.util.UUID;
 
 @Data
 public class CustomerSearchResponse {
-    private UUID cistomeIid;
+    private UUID cistomerId;
 }

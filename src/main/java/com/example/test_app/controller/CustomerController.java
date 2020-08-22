@@ -23,7 +23,6 @@ public class CustomerController {
     @PostMapping("/searchorcreate")
     public ResponseEntity<CustomerSearchResponse> searchOrCreate(
             @RequestBody CustomerSearchRequest request){
-        System.out.println(request);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 }
