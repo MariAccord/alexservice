@@ -8,7 +8,7 @@
 
     <changeSet author="allergi-ya@yandex.ru" id="011">
         <sql>
-            CREATE TABLE tables.order_status
+            CREATE TABLE application.order_status
             (
             id             UUID                     NOT NULL DEFAULT uuid_generate_v4() PRIMARY KEY,
             order_id       UUID                     NOT NULL,

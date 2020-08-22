@@ -8,7 +8,7 @@
 
     <changeSet author="admin" id="007">
         <sql>
-            CREATE SCHEMA IF NOT EXISTS tables;
+            CREATE SCHEMA IF NOT EXISTS application;
         </sql>
     </changeSet>
 </databaseChangeLog>

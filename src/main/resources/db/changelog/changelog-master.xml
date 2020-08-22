@@ -21,5 +21,6 @@
     <include file="/db/changelog/changes/013-create_address_table.xml"/>
     <include file="/db/changelog/changes/014-create_contact_table.xml"/>
     <include file="/db/changelog/changes/015-create_executed_work_table.xml"/>
+    <include file="/db/changelog/changes/016-fill_street_dictionary_volgograd.xml"/>
 
 </databaseChangeLog>

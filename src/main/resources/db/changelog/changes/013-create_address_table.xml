@@ -8,7 +8,7 @@
 
     <changeSet author="allergi-ya@yandex.ru" id="013">
         <sql>
-            CREATE TABLE tables.address
+            CREATE TABLE application.address
             (
             id              UUID         NOT NULL DEFAULT uuid_generate_v4() PRIMARY KEY,
             customer_id     UUID         NOT NULL,
@@ -18,7 +18,7 @@
             flat_number     INTEGER,
             office          VARCHAR(50),
             comment         VARCHAR(100) NOT NULL,
-            FOREIGN KEY (customer_id) REFERENCES tables.customer (id),
+            FOREIGN KEY (customer_id) REFERENCES application.customer (id),
             FOREIGN KEY (city, street) REFERENCES dictionaries.street (city, street)
             );
         </sql>
