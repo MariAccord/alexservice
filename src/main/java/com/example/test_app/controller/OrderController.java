@@ -10,15 +10,15 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/test")
-public class TestController {
+@RequestMapping("/order")
+public class OrderController {
     private final OrderService orderService;
 
-    public TestController(OrderService orderService) {
+    public OrderController(OrderService orderService) {
         this.orderService = orderService;
     }
 
-    @GetMapping("/orders")
+    @GetMapping("/getbyuser")
     public List<OrderDto> getOrderByUser(
             @RequestParam("username") String userName) {
         return orderService.getOrderByUserName(userName);
